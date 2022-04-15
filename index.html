@@ -33,52 +33,53 @@
     </style>
   </head>
   <body>
-    <header class="header">
-      <nav>
-        <div class="logo">
-          <img src="./images/logo.svg" alt="Snap" />
+    <main class="main">
+      <nav class="main__navbar">
+        <div class="left-side">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="Snap" />
+          </div>
+
+          <ul class="links">
+            <li>
+              <a href="#">Features</a>
+              <img src="./images/icon-arrow-down.svg" alt="" />
+            </li>
+            <li>
+              <a href="#">Company</a>
+              <img src="./images/icon-arrow-down.svg" alt="" />
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
         </div>
 
-        <ul class="links">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-
-        <div class="ctas">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+        <div class="right-side">
+          <a class="login-btn" href="#">Login</a>
+          <a class="btn-bordered" href="#">Register</a>
         </div>
       </nav>
 
-      <div class="container">
-        <div class="container__text">
+      <div class="main__container">
+        <div class="text">
           <h1>Make remote work</h1>
           <p>
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <button>Learn more</button>
+          <button class="btn-filled">Learn more</button>
+
+          <div class="clients">
+            <img src="./images/client-databiz.svg" alt="Databiz" />
+            <img src="./images/client-audiophile.svg" alt="Audiophile" />
+            <img src="./images/client-meet.svg" alt="Meet" />
+            <img src="./images/client-maker.svg" alt="Maker" />
+          </div>
         </div>
 
-        <div class="container__images">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-        </div>
+        <div class="image"></div>
       </div>
-
-      <div class="collaborators">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-      </div>
-    </header>
+    </main>
 
     <div class="attribution">
       Challenge by

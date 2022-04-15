@@ -16,4 +16,162 @@ body {
   padding: 0;
   font-family: "Epilogue", sans-serif;
 }
+
+h1 {
+  font-size: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-bordered {
+  border: 2px solid #141414;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-bordered:hover {
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-filled {
+  background-color: black;
+  color: white;
+  padding: 1.125rem 2rem;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid black;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-filled:hover {
+  background-color: #fafafa;
+  color: black;
+}
+
+.main {
+  background-color: #fafafa;
+}
+
+.main__navbar {
+  font-size: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.25rem 2.375rem;
+}
+
+.main__navbar .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main__navbar .left-side .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.main__navbar .left-side .links li:first-child a, .main__navbar .left-side .links li:nth-child(2) a {
+  margin-right: 0.375rem;
+}
+
+.main__navbar .left-side .links li:not(:last-child) {
+  margin-right: 1.25rem;
+}
+
+.main__navbar .right-side a:last-child {
+  margin-left: 1.25rem;
+}
+
+.main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.main__container .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main__container .text h1 {
+  width: 75%;
+}
+
+.main__container .text p {
+  width: 70%;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #141414;
+  margin-bottom: 3.75rem;
+}
+
+.main__container .text .clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6.75rem;
+  width: 75%;
+}
+
+.main__container .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-image: url(../images/image-hero-desktop.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 44.584vw;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
