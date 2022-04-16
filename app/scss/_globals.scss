@@ -23,7 +23,12 @@ h1 {
 
 a {
   text-decoration: none;
-  color: $almostBlack;
+  color: $mediumGray;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    color: black;
+  }
 }
 
 button {
@@ -31,8 +36,19 @@ button {
   cursor: pointer;
 }
 
+.invisible {
+  display: none;
+}
+
+.arrow-down {
+  background-image: url(../images/icon-arrow-down.svg);
+}
+.arrow-up {
+  background-image: url(../images/icon-arrow-up.svg);
+}
+
 .btn-bordered {
-  border: 2px solid $almostBlack;
+  border: 2px solid $mediumGray;
   border-radius: 10px;
   padding: 0.75rem 1.25rem;
   transition: all 150ms ease-in-out;
