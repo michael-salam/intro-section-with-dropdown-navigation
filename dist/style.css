@@ -21,6 +21,24 @@ h1 {
   font-size: 4rem;
 }
 
+@media (max-width: 63.9375em) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 26.5em) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
 a {
   text-decoration: none;
   color: dimgray;
@@ -75,6 +93,13 @@ button {
   transition: all 150ms ease-in-out;
 }
 
+@media (max-width: 63.9375em) {
+  .btn-filled {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+  }
+}
+
 .btn-filled:hover {
   background-color: #fafafa;
   color: black;
@@ -96,6 +121,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.25rem 2.375rem;
+}
+
+@media (max-width: 39.9375em) {
+  .main__navbar {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
 }
 
 .main__navbar .left-side {
@@ -121,6 +152,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+}
+
+@media (max-width: 47.9375em) {
+  .main__navbar .left-side .links {
+    display: none;
+  }
 }
 
 .main__navbar .left-side .links li:first-child, .main__navbar .left-side .links li:nth-child(2) {
@@ -186,8 +223,24 @@ button {
   margin-right: 1.5rem;
 }
 
+@media (max-width: 47.9375em) {
+  .main__navbar .right-side {
+    display: none;
+  }
+}
+
 .main__navbar .right-side a:last-child {
   margin-left: 1.25rem;
+}
+
+.main__navbar .menu-icon {
+  display: none;
+}
+
+@media (max-width: 47.9375em) {
+  .main__navbar .menu-icon {
+    display: block;
+  }
 }
 
 .main__container {
@@ -204,22 +257,72 @@ button {
   margin: auto;
 }
 
+@media (max-width: 47.9375em) {
+  .main__container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .main__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+  }
+}
+
 .main__container .text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
+@media (max-width: 39.9375em) {
+  .main__container .text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+  }
+}
+
 .main__container .text h1 {
   width: 75%;
+}
+
+@media (max-width: 89.9375em) {
+  .main__container .text h1 {
+    width: 100%;
+  }
 }
 
 .main__container .text p {
   width: 70%;
   font-size: 1rem;
   line-height: 1.7;
-  color: #141414;
+  color: dimgray;
   margin-bottom: 3.75rem;
+}
+
+@media (max-width: 63.9375em) {
+  .main__container .text p {
+    font-size: 0.75rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .main__container .text p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .main__container .text p {
+    width: 100%;
+  }
 }
 
 .main__container .text .clients {
@@ -233,7 +336,26 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 6.75rem;
-  width: 75%;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+@media (max-width: 63.9375em) {
+  .main__container .text .clients {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .main__container .text .clients img {
+    height: 1.25rem;
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .main__container .text .clients img {
+    height: 1rem;
+  }
 }
 
 .main__container .image {
@@ -246,5 +368,12 @@ button {
   background-repeat: no-repeat;
   height: 44.584vw;
   width: 100%;
+}
+
+@media (max-width: 39.9375em) {
+  .main__container .image {
+    background-image: url(../images/image-hero-mobile.png);
+    width: 100vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

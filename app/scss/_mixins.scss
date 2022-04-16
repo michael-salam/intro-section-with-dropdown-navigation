@@ -1,0 +1,29 @@
+// MEDIA QUERY MIXINS
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "64em",
+  "xlarge": "87.5em",
+);
+
+// 374px, 424px, 640px, 767px, 1023px, 1439px
+$breakpoints-down: (
+  "mobile": "23.375em",
+  "mobile-md": "26.5em",
+  "mobile-lg": "39.9375em",
+  "tablet": "47.9375em",
+  "laptop": "63.9375em",
+  "laptop-lg": "89.9375em",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

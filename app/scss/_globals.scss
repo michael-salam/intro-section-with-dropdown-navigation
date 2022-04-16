@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 html {
   font-size: 100%;
@@ -19,6 +20,18 @@ body {
 
 h1 {
   font-size: 4rem;
+
+  @include breakpoint-down(laptop) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint-down(tablet) {
+    font-size: 2.5rem;
+  }
+
+  @include breakpoint-down(mobile-md) {
+    font-size: 1.75rem;
+  }
 }
 
 a {
@@ -69,6 +82,11 @@ button {
   font-size: 0.875rem;
   border: 2px solid black;
   transition: all 150ms ease-in-out;
+
+  @include breakpoint-down(laptop) {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+  }
 
   &:hover {
     background-color: $almostWhite;
