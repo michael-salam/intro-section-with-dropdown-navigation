@@ -34,13 +34,19 @@
   </head>
   <body>
     <main class="main">
+      <div class="overlay invisible" id="overlay"></div>
+
       <nav class="main__navbar">
         <div class="left-side">
           <a href="/" class="logo">
             <img src="./images/logo.svg" alt="Snap" />
           </a>
 
-          <ul class="links">
+          <ul class="links" id="menu">
+            <div class="close-icon" id="close-icon">
+              <img src="./images/icon-close-menu.svg" alt="Close menu" />
+            </div>
+
             <li>
               <a href="#" class="has-dropdown" id="has-dropdown1">
                 Features
@@ -99,7 +105,7 @@
           <a class="btn-bordered" href="#">Register</a>
         </div>
 
-        <div class="menu-icon">
+        <div class="menu-icon" id="menu-icon">
           <img src="./images/icon-menu.svg" alt="Menu" />
         </div>
       </nav>

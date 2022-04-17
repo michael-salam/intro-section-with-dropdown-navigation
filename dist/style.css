@@ -55,6 +55,10 @@ button {
   cursor: pointer;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .invisible {
   display: none;
 }
@@ -106,7 +110,17 @@ button {
 }
 
 .main {
+  overflow-x: hidden;
   background-color: #fafafa;
+}
+
+.main .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.7);
 }
 
 .main__navbar {
@@ -139,6 +153,7 @@ button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  position: relative;
 }
 
 .main__navbar .left-side .links {
@@ -156,15 +171,37 @@ button {
 
 @media (max-width: 47.9375em) {
   .main__navbar .left-side .links {
-    display: none;
+    display: block;
+    position: absolute;
+    top: -1.5rem;
+    left: 50rem;
+    height: 100vh;
+    width: 60vw;
+    background-color: white;
+    margin: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    z-index: 100;
   }
 }
 
-.main__navbar .left-side .links li:first-child, .main__navbar .left-side .links li:nth-child(2) {
+.main__navbar .left-side .links .close-icon {
+  display: none;
+}
+
+@media (max-width: 47.9375em) {
+  .main__navbar .left-side .links .close-icon {
+    display: block;
+    text-align: right;
+    margin: 1.25rem 1.25rem 2.25rem 0;
+  }
+}
+
+.main__navbar .left-side .links li:nth-child(2), .main__navbar .left-side .links li:nth-child(3) {
   position: relative;
 }
 
-.main__navbar .left-side .links li:first-child a .arrow, .main__navbar .left-side .links li:nth-child(2) a .arrow {
+.main__navbar .left-side .links li:nth-child(2) a .arrow, .main__navbar .left-side .links li:nth-child(3) a .arrow {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -176,7 +213,14 @@ button {
   transition: all 300ms ease-in-out;
 }
 
-.main__navbar .left-side .links li:first-child .dropdown, .main__navbar .left-side .links li:nth-child(2) .dropdown {
+@media (max-width: 47.9375em) {
+  .main__navbar .left-side .links li:nth-child(2) a .arrow, .main__navbar .left-side .links li:nth-child(3) a .arrow {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+.main__navbar .left-side .links li:nth-child(2) .dropdown, .main__navbar .left-side .links li:nth-child(3) .dropdown {
   position: absolute;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -190,12 +234,25 @@ button {
   border-radius: 10px;
 }
 
-.main__navbar .left-side .links li:first-child .dropdown li:not(:last-child), .main__navbar .left-side .links li:nth-child(2) .dropdown li:not(:last-child) {
+@media (max-width: 47.9375em) {
+  .main__navbar .left-side .links li:nth-child(2) .dropdown, .main__navbar .left-side .links li:nth-child(3) .dropdown {
+    position: static;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 2.25rem;
+    margin-left: 1rem;
+  }
+}
+
+.main__navbar .left-side .links li:nth-child(2) .dropdown li:not(:last-child), .main__navbar .left-side .links li:nth-child(3) .dropdown li:not(:last-child) {
   margin-bottom: 1.125rem;
   margin-right: 0;
 }
 
-.main__navbar .left-side .links li:first-child .dropdown li a, .main__navbar .left-side .links li:nth-child(2) .dropdown li a {
+.main__navbar .left-side .links li:nth-child(2) .dropdown li a, .main__navbar .left-side .links li:nth-child(3) .dropdown li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,20 +264,27 @@ button {
           align-items: center;
 }
 
-.main__navbar .left-side .links li:first-child .dropdown li a img, .main__navbar .left-side .links li:nth-child(2) .dropdown li a img {
+.main__navbar .left-side .links li:nth-child(2) .dropdown li a img, .main__navbar .left-side .links li:nth-child(3) .dropdown li a img {
   margin-right: 0.875rem;
 }
 
-.main__navbar .left-side .links li:first-child #dropdown1, .main__navbar .left-side .links li:nth-child(2) #dropdown1 {
+.main__navbar .left-side .links li:nth-child(2) #dropdown1, .main__navbar .left-side .links li:nth-child(3) #dropdown1 {
   right: 0;
 }
 
-.main__navbar .left-side .links li:first-child #dropdown2, .main__navbar .left-side .links li:nth-child(2) #dropdown2 {
+.main__navbar .left-side .links li:nth-child(2) #dropdown2, .main__navbar .left-side .links li:nth-child(3) #dropdown2 {
   left: 0;
 }
 
 .main__navbar .left-side .links li:not(:last-child) {
   margin-right: 1.5rem;
+}
+
+@media (max-width: 47.9375em) {
+  .main__navbar .left-side .links li:not(:last-child) {
+    margin-bottom: 1.875rem;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 47.9375em) {
@@ -336,13 +400,13 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 6.75rem;
-  margin-bottom: 3rem;
   width: 100%;
 }
 
 @media (max-width: 63.9375em) {
   .main__container .text .clients {
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
