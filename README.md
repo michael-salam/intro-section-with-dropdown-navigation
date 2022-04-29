@@ -65,6 +65,6 @@ Although this project has probably the best mobile menu I've ever built, there's
 
 ## Author
 
-- Website - [Micihael Salam](https://michael-salam.netlify.app)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/michael-salam)
-- Twitter - [@yourusername](https://www.twitter.com/michaeldimimu)
+- Website - [Michael Salam](https://michael-salam.netlify.app)
+- Frontend Mentor - [@michael-salam](https://www.frontendmentor.io/profile/michael-salam)
+- Twitter - [@michaeldimimu](https://www.twitter.com/michaeldimimu)
